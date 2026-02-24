@@ -1,0 +1,241 @@
+{
+  "header": {
+    "fightClub": "FIGHT CLUB"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "schedule": "Schedule",
+    "contact": "Contact",
+    "martialArts": "Martial Arts",
+    "login": "Login",
+    "logout": "Logout",
+    "profile": "Profile",
+    "admin": "Admin"
+  },
+  "hero": {
+    "title": "NO LIMITATION",
+    "subtitle": "Fight Club - Pleven",
+    "quote": "\"Using no way as a way, having No Limitation as limitation.\"",
+    "quoteAuthor": "- Bruce Lee",
+    "cta": "Trial Class"
+  },
+  "home": {
+    "welcome": "Welcome to NL Fight Club",
+    "intro": "A martial arts club inspired by Bruce Lee's philosophy. We train body and mind without limitations.",
+    "disciplines": "Our Disciplines",
+    "whyUs": "Why Choose Us",
+    "whyUsText": "Professional instructors, modern facility, and family atmosphere.",
+    "trialClass": "Book a trial class",
+    "hero": {
+      "title": "NO<br>LIMITATION",
+      "subtitle": "Fight Club - Pleven",
+      "quote": "\"Using no way as a way, having No Limitation as limitation.\"",
+      "author": "- Bruce Lee",
+      "cta": "Trial Class"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "quote": "\"Using no way as a way, having No Limitation as limitation.\"",
+    "quoteAuthor": "- Bruce Lee",
+    "history": "Club History",
+    "historyText": "The club was founded in 2010 by Genko Simeonov and Pantaley Gergov, who are Senior Instructors in Jeet Kune Do. Initially, the club focused on mixed martial arts under the name MMA Pleven. Gradually, the club expanded its activities to include multiple combat disciplines - MMA, Grappling, San Da, and Brazilian Jiu-Jitsu. This expansion led to renaming the club to No Limitation.",
+    "philosophy": "Philosophy",
+    "philosophyText": "The club's name comes from a Bruce Lee quote: \"Using no way as a way, having No Limitation as limitation\". We believe everyone can reach their potential through hard work and proper guidance, without limitations - both physical and mental.",
+    "instructors": "Instructors",
+    "facilities": "Facilities & Equipment",
+    "lineage": "Jeet Kune Do Lineage",
+    "partnership": "Partnerships",
+    "partnershipText": "The club works in collaboration with Twisted Jiu Jitsu for Brazilian Jiu-Jitsu."
+  },
+  "schedule": {
+    "title": "Training Schedule",
+    "subtitle": "Choose your training time and join us on the mat",
+    "adultClasses": "Adult Classes",
+    "kidsClasses": "Kids Classes",
+    "kidsAges": "Age groups: 5-7 years and 8-13 years",
+    "years": "yrs",
+    "questions": "Have questions?",
+    "contactUs": "Contact us for more information about training and enrollment.",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday"
+  },
+  "contact": {
+    "title": "Contact",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Working Hours",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    },
+    "social": "Social Media"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "profile": "Profile",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "John Doe",
+    "loggingIn": "Logging in...",
+    "registering": "Registering...",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "invalidCredentials": "Invalid email or password",
+    "allFieldsRequired": "All fields are required",
+    "passwordMismatch": "Passwords do not match",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "registrationSuccess": "Registration successful!",
+    "checkEmail": "Check your email for confirmation.",
+    "goToLogin": "Go to Login",
+    "profileUpdated": "Profile updated successfully!",
+    "role": "Role"
+  },
+  "admin": {
+    "dashboard": "Admin Panel",
+    "classes": "Classes",
+    "submissions": "Submissions",
+    "instructors": "Instructors",
+    "newSubmissions": "New Submissions",
+    "totalClasses": "Total Classes",
+    "totalInstructors": "Total Instructors",
+    "quickLinks": "Quick Links",
+    "viewSubmissions": "View Submissions",
+    "viewMartialArts": "View Martial Arts",
+    "manageClasses": "Manage Classes",
+    "manageInstructors": "Manage Instructors",
+    "manageMartialArts": "Manage Martial Arts",
+    "viewSite": "View Site",
+    "addClass": "Add Class",
+    "addMartialArt": "Add Martial Art",
+    "martialArts": "Martial Arts",
+    "martialArtTitle": "Title",
+    "martialArtSubTitle": "Subtitle",
+    "subTitlePlaceholder": "The Way of the Intercepting Fist",
+    "description": "Description",
+    "descriptionPlaceholder": "Enter description...",
+    "noMartialArts": "No martial arts added yet",
+    "noAdvantages": "No advantages added yet",
+    "newAdvantagePlaceholder": "Add new advantage...",
+    "addInstructor": "Add Instructor",
+    "discipline": "Discipline",
+    "dayOfWeek": "Day of Week",
+    "time": "Time",
+    "ageGroup": "Age Group",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "actions": "Actions",
+    "instructorName": "Instructor Name",
+    "instructorTitle": "Title",
+    "titlePlaceholder": "Senior Instructor",
+    "disciplines": "Disciplines",
+    "displayOrder": "Display Order",
+    "bio": "Biography",
+    "confirmDelete": "Are you sure you want to delete?",
+    "noSubmissions": "No submissions",
+    "markRead": "Mark as Read",
+    "markReplied": "Mark as Replied",
+    "filter": {
+      "all": "All",
+      "new": "New",
+      "read": "Read",
+      "replied": "Replied"
+    },
+    "status": {
+      "new": "New",
+      "read": "Read",
+      "replied": "Replied"
+    },
+    "manageUsers": "Manage Users",
+    "users": {
+      "title": "User Management",
+      "totalUsers": "Total Users",
+      "addUser": "Add User",
+      "userCreated": "User created successfully",
+      "fetchError": "Error fetching users",
+      "saveError": "Error saving user",
+      "cannotDeleteSelf": "You cannot delete your own account",
+      "confirmDelete": "Are you sure you want to delete this user? This action cannot be undone.",
+      "createdAt": "Created"
+    },
+    "role": {
+      "user": "User",
+      "admin": "Admin"
+    }
+  },
+  "common": {
+    "notFound": "Not Found",
+    "save": "Save",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "clickToUpload": "Click to upload",
+    "uploading": "Uploading...",
+    "uploadError": "Upload error",
+    "savedChanges": "Changes are saved."
+  },
+  "martialArts": {
+    "benefits": "Benefits",
+    "training": "Training Process",
+    "readyToStart": "Ready to start your {{name}} journey?",
+    "viewSchedule": "View Schedule",
+    "bookTrial": "Book Trial Class",
+    "jkd": {
+      "name": "Jeet Kune Do",
+      "description": "Jeet Kune Do (\"The Way of the Intercepting Fist\") is a martial art created by Bruce Lee. It's more of a fighting philosophy than a fixed style.",
+      "benefits": "Benefits",
+      "training": "Training Process"
+    },
+    "mma": {
+      "name": "MMA",
+      "description": "Mixed Martial Arts (MMA) combines techniques from various disciplines - boxing, kickboxing, wrestling, Brazilian jiu-jitsu, and more.",
+      "benefits": "Benefits",
+      "training": "Training Process"
+    },
+    "bjj": {
+      "name": "Brazilian Jiu-Jitsu",
+      "description": "Brazilian Jiu-Jitsu is a martial art focused on ground fighting and submission techniques.",
+      "benefits": "Benefits",
+      "training": "Training Process"
+    },
+    "sanda": {
+      "name": "San Da",
+      "description": "San Da (Sanda) is Chinese kickboxing that combines punches, kicks, throws, and clinch fighting.",
+      "benefits": "Benefits",
+      "training": "Training Process"
+    },
+    "eskrima": {
+      "name": "Eskrima",
+      "description": "Eskrima (Kali/Arnis) is a Filipino martial art focused on weapon-based fighting - sticks, knives, and improvised weapons.",
+      "benefits": "Benefits",
+      "training": "Training Process"
+    },
+    "learnMore": "Learn More"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "followUs": "Follow Us"
+  },
+  "validation": {
+    "titleRequired": "Title is required",
+    "descriptionRequired": "Description is required"
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "header": {
+    "fightClub": "CLUB DI COMBATTIMENTO"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "schedule": "Orari",
+    "contact": "Contatti",
+    "martialArts": "Arti Marziali",
+    "login": "Accedi",
+    "logout": "Esci",
+    "profile": "Profilo",
+    "admin": "Admin"
+  },
+  "hero": {
+    "title": "NO LIMITATION",
+    "subtitle": "Club di Combattimento - Pleven",
+    "quote": "\"Non usare nessuna via come via, non avere Nessuna Limitazione come limitazione.\"",
+    "quoteAuthor": "- Bruce Lee",
+    "cta": "Lezione di Prova"
+  },
+  "home": {
+    "welcome": "Benvenuti al NL Fight Club",
+    "intro": "Un club di arti marziali ispirato alla filosofia di Bruce Lee. Alleniamo corpo e mente senza limitazioni.",
+    "disciplines": "Le Nostre Discipline",
+    "whyUs": "Perché Sceglierci",
+    "whyUsText": "Istruttori professionisti, struttura moderna e atmosfera familiare.",
+    "trialClass": "Prenota una lezione di prova",
+    "hero": {
+      "title": "NO<br>LIMITATION",
+      "subtitle": "Club di Combattimento - Pleven",
+      "quote": "\"Non usare nessuna via come via, non avere Nessuna Limitazione come limitazione.\"",
+      "author": "- Bruce Lee",
+      "cta": "Lezione di Prova"
+    }
+  },
+  "about": {
+    "title": "Chi Siamo",
+    "quote": "\"Non usare nessuna via come via, non avere Nessuna Limitazione come limitazione.\"",
+    "quoteAuthor": "- Bruce Lee",
+    "history": "Storia del Club",
+    "historyText": "Il club è stato fondato nel 2010 da Genko Simeonov e Pantaley Gergov, istruttori senior di Jeet Kune Do. Inizialmente, il club si concentrava sulle arti marziali miste con il nome MMA Pleven. Gradualmente, il club ha ampliato le sue attività includendo molteplici discipline di combattimento - MMA, Grappling, San Da e Jiu-Jitsu Brasiliano. Questa espansione ha portato a rinominare il club in No Limitation.",
+    "philosophy": "Filosofia",
+    "philosophyText": "Il nome del club deriva da una citazione di Bruce Lee: \"Using no way as a way, having No Limitation as limitation\". Crediamo che ognuno possa raggiungere il proprio potenziale attraverso il duro lavoro e la giusta guida, senza limitazioni - sia fisiche che mentali.",
+    "instructors": "Istruttori",
+    "facilities": "Strutture e Attrezzature",
+    "lineage": "Lignaggio del Jeet Kune Do",
+    "partnership": "Partnership",
+    "partnershipText": "Il club collabora con Twisted Jiu Jitsu per il Jiu-Jitsu Brasiliano."
+  },
+  "schedule": {
+    "title": "Orario degli Allenamenti",
+    "subtitle": "Scegli il tuo orario di allenamento e unisciti a noi",
+    "adultClasses": "Corsi Adulti",
+    "kidsClasses": "Corsi Bambini",
+    "kidsAges": "Fasce d'età: 5-7 anni e 8-13 anni",
+    "years": "anni",
+    "questions": "Hai domande?",
+    "contactUs": "Contattaci per maggiori informazioni sugli allenamenti e le iscrizioni.",
+    "monday": "Lunedì",
+    "tuesday": "Martedì",
+    "wednesday": "Mercoledì",
+    "thursday": "Giovedì",
+    "friday": "Venerdì",
+    "saturday": "Sabato",
+    "sunday": "Domenica"
+  },
+  "contact": {
+    "title": "Contatti",
+    "address": "Indirizzo",
+    "phone": "Telefono",
+    "email": "Email",
+    "hours": "Orari di Apertura",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "message": "Messaggio",
+      "send": "Invia",
+      "sending": "Invio...",
+      "success": "Messaggio inviato con successo!",
+      "error": "Errore nell'invio. Riprova."
+    },
+    "social": "Social Media"
+  },
+  "auth": {
+    "login": "Accedi",
+    "register": "Registrati",
+    "logout": "Esci",
+    "profile": "Profilo",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Conferma Password",
+    "fullName": "Nome Completo",
+    "fullNamePlaceholder": "Mario Rossi",
+    "loggingIn": "Accesso...",
+    "registering": "Registrazione...",
+    "noAccount": "Non hai un account?",
+    "hasAccount": "Hai già un account?",
+    "invalidCredentials": "Email o password non validi",
+    "allFieldsRequired": "Tutti i campi sono obbligatori",
+    "passwordMismatch": "Le password non corrispondono",
+    "passwordTooShort": "La password deve essere di almeno 6 caratteri",
+    "registrationSuccess": "Registrazione completata!",
+    "checkEmail": "Controlla la tua email per la conferma.",
+    "goToLogin": "Vai al login",
+    "profileUpdated": "Profilo aggiornato con successo!",
+    "role": "Ruolo"
+  },
+  "admin": {
+    "dashboard": "Pannello Admin",
+    "classes": "Lezioni",
+    "submissions": "Messaggi",
+    "instructors": "Istruttori",
+    "newSubmissions": "Nuovi Messaggi",
+    "totalClasses": "Totale Lezioni",
+    "totalInstructors": "Totale Istruttori",
+    "quickLinks": "Link Rapidi",
+    "viewSubmissions": "Visualizza Messaggi",
+    "viewMartialArts": "Panoramica sulle arti marziali",
+    "manageClasses": "Gestisci Lezioni",
+    "manageInstructors": "Gestisci Istruttori",
+    "viewSite": "Visualizza Sito",
+    "addClass": "Aggiungi Lezione",
+    "noAdvantages": "Nessun vantaggio aggiunto",
+    "newAdvantagePlaceholder": "Aggiungi nuovo vantaggio...",
+    "addInstructor": "Aggiungi Istruttore",
+    "discipline": "Disciplina",
+    "dayOfWeek": "Giorno della Settimana",
+    "time": "Orario",
+    "ageGroup": "Fascia d'Età",
+    "startTime": "Ora Inizio",
+    "endTime": "Ora Fine",
+    "actions": "Azioni",
+    "instructorName": "Nome Istruttore",
+    "instructorTitle": "Titolo",
+    "titlePlaceholder": "Istruttore Senior",
+    "disciplines": "Discipline",
+    "displayOrder": "Ordine di Visualizzazione",
+    "bio": "Biografia",
+    "confirmDelete": "Sei sicuro di voler eliminare?",
+    "noSubmissions": "Nessun messaggio",
+    "markRead": "Segna come Letto",
+    "markReplied": "Segna come Risposto",
+    "filter": {
+      "all": "Tutti",
+      "new": "Nuovi",
+      "read": "Letti",
+      "replied": "Risposti"
+    },
+    "status": {
+      "new": "Nuovo",
+      "read": "Letto",
+      "replied": "Risposto"
+    },
+    "manageUsers": "Gestione Utenti",
+    "users": {
+      "title": "Gestione Utenti",
+      "totalUsers": "Totale Utenti",
+      "addUser": "Aggiungi Utente",
+      "userCreated": "Utente creato con successo",
+      "fetchError": "Errore nel caricamento degli utenti",
+      "saveError": "Errore nel salvataggio dell'utente",
+      "cannotDeleteSelf": "Non puoi eliminare il tuo account",
+      "confirmDelete": "Sei sicuro di voler eliminare questo utente? Questa azione non può essere annullata.",
+      "createdAt": "Creato"
+    },
+    "role": {
+      "user": "Utente",
+      "admin": "Amministratore"
+    }
+  },
+  "common": {
+    "save": "Salva",
+    "saving": "Salvataggio...",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "add": "Aggiungi",
+    "clickToUpload": "Clicca per caricare",
+    "uploading": "Caricamento...",
+    "uploadError": "Errore di caricamento",
+    "savedChanges": "Modifiche salvate."
+  },
+  "martialArts": {
+    "jkd": {
+      "name": "Jeet Kune Do",
+      "description": "Jeet Kune Do (\"La Via del Pugno che Intercetta\") è un'arte marziale creata da Bruce Lee. È più una filosofia di combattimento che uno stile fisso.",
+      "benefits": "Benefici",
+      "training": "Processo di Allenamento"
+    },
+    "mma": {
+      "name": "MMA",
+      "description": "Le Arti Marziali Miste (MMA) combinano tecniche di varie discipline - boxe, kickboxing, lotta, jiu-jitsu brasiliano e altro.",
+      "benefits": "Benefici",
+      "training": "Processo di Allenamento"
+    },
+    "bjj": {
+      "name": "Jiu-Jitsu Brasiliano",
+      "description": "Il Jiu-Jitsu Brasiliano è un'arte marziale focalizzata sul combattimento a terra e sulle tecniche di sottomissione.",
+      "benefits": "Benefici",
+      "training": "Processo di Allenamento"
+    },
+    "sanda": {
+      "name": "San Da",
+      "description": "San Da (Sanda) è kickboxing cinese che combina pugni, calci, proiezioni e combattimento in clinch.",
+      "benefits": "Benefici",
+      "training": "Processo di Allenamento"
+    },
+    "eskrima": {
+      "name": "Eskrima",
+      "description": "Eskrima (Kali/Arnis) è un'arte marziale filippina focalizzata sul combattimento con armi - bastoni, coltelli e armi improvvisate.",
+      "benefits": "Benefici",
+      "training": "Processo di Allenamento"
+    },
+    "learnMore": "Scopri di Più"
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati",
+    "followUs": "Seguici"
+  },
+  "validation": {
+    "titleRequired": "Il titolo è obbligatorio",
+    "descriptionRequired": "La descrizione è obbligatoria"
+  }
+}
