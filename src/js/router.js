@@ -104,6 +104,9 @@ class Router {
     this.currentRoute = path;
     this.params = matchedRoute.params;
 
+    // Dispatch route change event for components that need to update
+    window.dispatchEvent(new CustomEvent('routechange', { detail: { path } }));
+
     // Call route handler
     try {
       await matchedRoute.handler(matchedRoute.params);

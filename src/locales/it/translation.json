@@ -105,7 +105,18 @@
     "checkEmail": "Controlla la tua email per la conferma.",
     "goToLogin": "Vai al login",
     "profileUpdated": "Profilo aggiornato con successo!",
-    "role": "Ruolo"
+    "role": "Ruolo",
+    "loginSuccess": "Accesso riuscito"
+  },
+  "profile": {
+    "title": "Profilo",
+    "fullName": "Nome",
+    "email": "E-mail",
+    "memberSince": "Registrato su",
+    "editProfile": "Modifica profilo",
+    "changePassword": "Cambiare la password",
+    "newPassword": "Nuova password",
+    "confirmPassword": "Conferma password"
   },
   "admin": {
     "dashboard": "Pannello Admin",

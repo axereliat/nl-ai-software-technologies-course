@@ -83,6 +83,16 @@
     },
     "social": "Социальные сети"
   },
+  "profile": {
+    "title": "Профиль",
+    "fullName": "Полное имя",
+    "email": "Злектронная почта",
+    "memberSince": "Участник с",
+    "editProfile": "Редактировать профиль",
+    "changePassword": "Изменить пароль",
+    "newPassword": "Новый пароль",
+    "confirmPassword": "Подтвердите пароль"
+  },
   "auth": {
     "login": "Вход",
     "register": "Регистрация",
@@ -106,7 +116,8 @@
     "checkEmail": "Проверьте почту для подтверждения.",
     "goToLogin": "Перейти ко входу",
     "profileUpdated": "Профиль успешно обновлён!",
-    "role": "Роль"
+    "role": "Роль",
+    "loginSuccess": "Успешный вход в систему"
   },
   "admin": {
     "dashboard": "Админ панель",

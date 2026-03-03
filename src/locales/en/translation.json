@@ -105,7 +105,18 @@
     "checkEmail": "Check your email for confirmation.",
     "goToLogin": "Go to Login",
     "profileUpdated": "Profile updated successfully!",
-    "role": "Role"
+    "role": "Role",
+    "loginSuccess": "Successful login"
+  },
+  "profile": {
+    "title": "Profile",
+    "fullName": "Full name",
+    "email": "Email",
+    "memberSince": "Registered on",
+    "editProfile": "Edit profile",
+    "changePassword": "Change password",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm password"
   },
   "admin": {
     "dashboard": "Admin Panel",

@@ -106,6 +106,57 @@ class AuthService {
   }
 
   /**
+   * Sign up with email and password
+   * @param {string} email - User email
+   * @param {string} password - User password
+   * @param {string} fullName - User full name
+   * @returns {Promise<{error: Error|null}>}
+   */
+  async signUp(email, password, fullName) {
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: {
+          full_name: fullName
+        }
+      }
+    });
+
+    return { data, error };
+  }
+
+  /**
+   * Sign in with GitHub
+   * @returns {Promise<{error: Error|null}>}
+   */
+  async signInWithGitHub() {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'github',
+      options: {
+        redirectTo: `${window.location.origin}/`
+      }
+    });
+
+    return { error };
+  }
+
+  /**
+   * Sign in with Google
+   * @returns {Promise<{error: Error|null}>}
+   */
+  async signInWithGoogle() {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: `${window.location.origin}/`
+      }
+    });
+
+    return { error };
+  }
+
+  /**
    * Sign out current user
    */
   async signOut() {

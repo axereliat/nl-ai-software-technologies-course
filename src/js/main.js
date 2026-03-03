@@ -16,6 +16,19 @@ import { toast } from './components/ui/Toast.js';
 import { renderHome } from './pages/Home.js';
 import { renderAbout } from './pages/About.js';
 import { renderContact } from './pages/Contact.js';
+import { renderLogin } from './pages/Login.js';
+import { renderRegister } from './pages/Register.js';
+import { renderProfile } from './pages/Profile.js';
+import { renderSchedule } from './pages/Schedule.js';
+import { renderMartialArtDetail } from './pages/MartialArtDetail.js';
+import { renderAdminDashboard } from './pages/admin/Dashboard.js';
+import { renderAdminUsers } from './pages/admin/Users.js';
+import { renderAdminMartialArts } from './pages/admin/MartialArts.js';
+import { renderMartialArtForm } from './pages/admin/MartialArtForm.js';
+import { renderAdminClasses } from './pages/admin/Classes.js';
+import { renderClassForm } from './pages/admin/ClassForm.js';
+import { renderAdminInstructors } from './pages/admin/Instructors.js';
+import { renderInstructorForm } from './pages/admin/InstructorForm.js';
 
 /**
  * Initialize the application
@@ -73,16 +86,28 @@ function registerRoutes() {
   router.route('/', renderHome);
   router.route('/about', renderAbout);
   router.route('/contact', renderContact);
-  router.route('/login', renderPlaceholder('Login'));
+  router.route('/schedule', renderSchedule);
+  router.route('/login', renderLogin);
+  router.route('/register', renderRegister);
 
   // Protected routes
-  router.route('/profile', renderPlaceholder('Profile'), { requiresAuth: true });
+  router.route('/profile', renderProfile, { requiresAuth: true });
 
   // Admin routes
-  router.route('/admin', renderPlaceholder('Admin Dashboard'), { requiresAuth: true, requiresAdmin: true });
+  router.route('/admin', renderAdminDashboard, { requiresAuth: true, requiresAdmin: true });
+  router.route('/admin/users', renderAdminUsers, { requiresAuth: true, requiresAdmin: true });
+  router.route('/admin/martial-arts', renderAdminMartialArts, { requiresAuth: true, requiresAdmin: true });
+  router.route('/admin/martial-arts/new', renderMartialArtForm, { requiresAuth: true, requiresAdmin: true });
+  router.route('/admin/martial-arts/:id/edit', renderMartialArtForm, { requiresAuth: true, requiresAdmin: true });
+  router.route('/admin/classes', renderAdminClasses, { requiresAuth: true, requiresAdmin: true });
+  router.route('/admin/classes/new', renderClassForm, { requiresAuth: true, requiresAdmin: true });
+  router.route('/admin/classes/:id/edit', renderClassForm, { requiresAuth: true, requiresAdmin: true });
+  router.route('/admin/instructors', renderAdminInstructors, { requiresAuth: true, requiresAdmin: true });
+  router.route('/admin/instructors/new', renderInstructorForm, { requiresAuth: true, requiresAdmin: true });
+  router.route('/admin/instructors/:id/edit', renderInstructorForm, { requiresAuth: true, requiresAdmin: true });
 
   // Martial arts routes
-  router.route('/martial-arts/:id', renderPlaceholder('Martial Art Details'));
+  router.route('/martial-arts/:id', renderMartialArtDetail);
 }
 
 /**

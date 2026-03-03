@@ -85,20 +85,215 @@
 }
 
 /* Navbar styling */
+.sticky-top {
+  backdrop-filter: blur(10px);
+  background-color: rgba(26, 26, 26, 0.95) !important;
+  z-index: 1030;
+}
+
+.navbar {
+  position: relative;
+  z-index: 1031;
+}
+
 .navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.8);
-  transition: color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.navbar-dark .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 2px;
+  background: var(--bs-warning);
+  transition: transform 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after,
+.navbar-dark .navbar-nav .nav-link.text-accent::after {
+  transform: translateX(-50%) scaleX(1);
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-  color: var(--bs-warning);
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.text-accent {
+  color: var(--bs-warning) !important;
+}
+
+/* Dropdown Improvements */
+.dropdown-menu {
+  background-color: #2d2d2d !important;
+  border: 1px solid rgba(212, 175, 55, 0.2) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  padding: 0.5rem 0 !important;
+  margin-top: 0.5rem !important;
+  min-width: 200px !important;
+  z-index: 9999 !important;
+}
+
+/* Dropdown toggle active state */
+.navbar-dark .navbar-nav .dropdown-toggle.text-accent {
+  color: var(--bs-warning) !important;
+}
+
+.dropdown-item {
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding: 0.75rem 1.25rem !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.95rem !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  text-decoration: none !important;
+  display: block !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: rgba(212, 175, 55, 0.1) !important;
+  color: var(--bs-warning) !important;
+  transform: translateX(4px);
+  text-decoration: none !important;
+}
+
+.dropdown-item.disabled {
+  cursor: not-allowed !important;
+  opacity: 0.5;
+}
+
+.dropdown-divider {
+  border-color: rgba(212, 175, 55, 0.2) !important;
+  margin: 0.5rem 0 !important;
+}
+
+.dropdown-toggle::after {
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+/* User Avatar Button */
+.user-avatar-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--bs-warning) 0%, rgba(212, 175, 55, 0.8) 100%);
+  border: 2px solid var(--bs-warning);
+  color: var(--bs-dark);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.user-avatar-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+}
+
+.user-avatar-btn::after {
+  display: none !important;
+}
+
+/* Active dropdown item */
+.dropdown-item.active {
+  background-color: rgba(212, 175, 55, 0.15) !important;
+  color: var(--bs-warning) !important;
+}
+
+/* Smooth dropdown animation */
+.dropdown-menu.show {
+  animation: slideDown 0.2s ease;
+  display: block !important;
+  pointer-events: auto !important;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure dropdown items are above everything */
+.dropdown-menu > li {
+  position: relative;
+  z-index: 10000;
+  pointer-events: auto;
+}
+
+.dropdown-menu a {
+  position: relative;
+  z-index: 10001;
+  pointer-events: auto !important;
+}
+
+/* Fix Bootstrap dropdown closing issue */
+.dropdown-menu.show {
+  pointer-events: auto !important;
+}
+
+.dropdown-item:active {
+  background-color: rgba(212, 175, 55, 0.15) !important;
+}
+
+/* Login button */
+.btn-warning.rounded-pill {
+  transition: all 0.3s ease;
+}
+
+.btn-warning.rounded-pill:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+}
+
+/* Mobile responsive navbar */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(26, 26, 26, 0.98);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .dropdown-menu {
+    background-color: rgba(45, 45, 45, 0.95) !important;
+    border: none !important;
+    margin-left: 1rem;
+  }
+
+  .nav-item {
+    margin: 0.25rem 0;
+  }
+
+  .navbar-dark .navbar-nav .nav-link::after {
+    display: none;
+  }
 }
 
 /* Header Logo */
 .header-logo {
   transition: transform 0.3s ease, filter 0.3s ease;
   filter: brightness(1.3) contrast(1.1) drop-shadow(0 2px 8px rgba(212, 175, 55, 0.5));
+  border-radius: 50%;
+}
+
+.navbar-brand {
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand:hover {
+  transform: translateY(-2px);
 }
 
 .navbar-brand:hover .header-logo {
@@ -194,4 +389,1137 @@
   border-radius: 4px;
   max-width: 900px;
   margin: 0 auto;
+}
+
+/* Contact Page Styles */
+.contact-card {
+  background: rgba(45, 45, 45, 0.4);
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.contact-card:hover {
+  background: rgba(45, 45, 45, 0.6);
+  transform: translateY(-4px);
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  color: var(--bs-warning);
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(45, 45, 45, 0.6);
+  border-radius: 50%;
+  color: var(--bs-muted);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--bs-warning);
+  transform: scale(1.1);
+}
+
+/* Auth Pages Styles */
+.auth-card {
+  background: rgba(45, 45, 45, 0.6);
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.auth-card .form-control {
+  background-color: rgba(45, 45, 45, 0.8);
+  border: 1px solid transparent;
+  color: var(--bs-light);
+}
+
+.auth-card .form-control:focus {
+  background-color: rgba(45, 45, 45, 0.9);
+  border-color: var(--bs-warning);
+  color: var(--bs-light);
+}
+
+.auth-card .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Form Validation Styling */
+.invalid-feedback {
+  display: none;
+  color: #ff6b6b;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback,
+.form-control.is-invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border: 2px solid #ff6b6b !important;
+  background-color: rgba(255, 107, 107, 0.1) !important;
+}
+
+.was-validated .form-control:valid,
+.form-control.is-valid {
+  border: 2px solid var(--bs-warning) !important;
+  background-image: none;
+}
+
+.auth-card .was-validated .form-control:invalid {
+  background-color: rgba(255, 107, 107, 0.05) !important;
+}
+
+.auth-card .form-control:focus {
+  border: 2px solid var(--bs-warning) !important;
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.15) !important;
+}
+
+/* Profile Page Styles */
+.profile-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--bs-warning) 0%, rgba(212, 175, 55, 0.7) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--bs-dark);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.profile-info {
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  padding-top: 1.5rem;
+}
+
+/* Schedule Page Styles */
+.class-card {
+  background: rgba(45, 45, 45, 0.6);
+  border-left: 3px solid var(--bs-warning);
+  border-radius: 8px;
+  padding: 1.5rem;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.class-card:hover {
+  background: rgba(45, 45, 45, 0.8);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.class-header {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.class-time {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.class-instructor {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.class-level {
+  margin-top: 0.75rem;
+}
+
+.class-capacity {
+  display: flex;
+  align-items: center;
+}
+
+/* Martial Art Detail Page Styles */
+.martial-art-hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.martial-art-detail-hero {
+  min-height: 80vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.martial-art-card {
+  background: rgba(45, 45, 45, 0.6);
+  border-left: 4px solid var(--bs-warning);
+  padding: 2rem 2.5rem;
+  border-radius: 8px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background: rgba(45, 45, 45, 0.4);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  background: rgba(45, 45, 45, 0.6);
+  transform: translateX(4px);
+}
+
+.benefit-item svg {
+  color: var(--bs-warning);
+  flex-shrink: 0;
+}
+
+/* Benefits Section - Detail Page */
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.benefit-item-detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.benefit-checkmark {
+  color: var(--bs-warning);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-checkmark svg {
+  width: 24px;
+  height: 24px;
+}
+
+.benefit-text {
+  color: var(--bs-light);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.schedule-item {
+  padding: 1rem;
+  background: rgba(45, 45, 45, 0.4);
+  border-radius: 4px;
+}
+
+.schedule-day {
+  font-size: 1.1rem;
+}
+
+.schedule-time {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+/* Admin Dashboard Styles */
+.stat-card {
+  background: rgba(45, 45, 45, 0.6);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.stat-card:hover {
+  background: rgba(45, 45, 45, 0.8);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--bs-dark);
+}
+
+.stat-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.stat-info {
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--bs-warning);
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.stat-label {
+  color: var(--bs-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* New Admin Dashboard Stat Cards */
+.stat-card-new {
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.stat-card-red {
+  background: linear-gradient(135deg, rgba(139, 69, 69, 0.3) 0%, rgba(89, 39, 39, 0.4) 100%);
+  border: 2px solid rgba(139, 69, 69, 0.5);
+}
+
+.stat-card-blue {
+  background: linear-gradient(135deg, rgba(41, 98, 155, 0.3) 0%, rgba(25, 60, 95, 0.4) 100%);
+  border: 2px solid rgba(41, 98, 155, 0.5);
+}
+
+.stat-card-green {
+  background: linear-gradient(135deg, rgba(39, 94, 69, 0.3) 0%, rgba(25, 60, 45, 0.4) 100%);
+  border: 2px solid rgba(39, 94, 69, 0.5);
+}
+
+.stat-label-new {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.stat-value-new {
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Quick Link Buttons */
+.quick-link-btn {
+  display: block;
+  background: rgba(45, 45, 45, 0.6);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quick-link-btn:hover {
+  background: rgba(45, 45, 45, 0.8);
+  color: var(--bs-warning);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: var(--bs-warning);
+}
+
+.action-card {
+  background: rgba(45, 45, 45, 0.6);
+  border-left: 3px solid var(--bs-warning);
+  border-radius: 8px;
+  padding: 1.75rem 1.5rem;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.action-card:hover {
+  background: rgba(45, 45, 45, 0.8);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.action-icon {
+  color: var(--bs-warning);
+  margin-bottom: 1rem;
+}
+
+/* Admin Table Styles */
+.admin-table {
+  background: rgba(45, 45, 45, 0.6);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-table table {
+  margin-bottom: 0;
+}
+
+.admin-table thead {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.admin-table th {
+  color: var(--bs-warning);
+  font-weight: 600;
+  padding: 1rem;
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+.admin-table td {
+  color: var(--bs-light);
+  padding: 1rem;
+  border-color: rgba(45, 45, 45, 0.4);
+  vertical-align: middle;
+}
+
+.admin-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.admin-table tbody tr:hover {
+  background: rgba(212, 175, 55, 0.05);
+}
+
+/* Admin Card */
+.admin-card {
+  background: rgba(45, 45, 45, 0.6);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.admin-card .form-control,
+.admin-card .form-select {
+  background-color: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: var(--bs-light);
+  padding: 0.75rem 1rem;
+}
+
+.admin-card .form-control:focus,
+.admin-card .form-select:focus {
+  background-color: rgba(26, 26, 26, 0.9);
+  border-color: var(--bs-warning);
+  color: var(--bs-light);
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.15);
+}
+
+.admin-card .form-select option {
+  background-color: #1a1a1a;
+  color: var(--bs-light);
+}
+
+/* Martial Arts Card Styles */
+.martial-art-card {
+  background: rgba(45, 45, 45, 0.6);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.martial-art-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.martial-art-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.martial-art-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(45, 45, 45, 1), transparent);
+}
+
+.martial-art-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.martial-art-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bs-light);
+  margin-bottom: 0.5rem;
+}
+
+.martial-art-subtitle {
+  font-size: 0.95rem;
+  color: var(--bs-warning);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.martial-art-description {
+  color: var(--bs-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+/* Martial Art Form Styles */
+.martial-art-form-container {
+  background: rgba(45, 45, 45, 0.6);
+  border-radius: 12px;
+  padding: 2.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.martial-art-form-container .form-control,
+.martial-art-form-container .form-select {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.95) 0%, rgba(201, 162, 39, 0.95) 100%);
+  border: 2px solid rgba(212, 175, 55, 0.8);
+  color: #1a1a1a;
+  padding: 0.85rem 1.25rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.martial-art-form-container .form-control::placeholder {
+  color: rgba(26, 26, 26, 0.6);
+  font-weight: 400;
+}
+
+.martial-art-form-container .form-control:focus,
+.martial-art-form-container .form-select:focus {
+  background: linear-gradient(135deg, rgba(224, 187, 71, 0.95) 0%, rgba(212, 175, 55, 0.95) 100%);
+  border-color: var(--bs-warning);
+  color: #1a1a1a;
+  box-shadow: 0 0 0 0.3rem rgba(212, 175, 55, 0.25);
+  outline: none;
+}
+
+.martial-art-form-container .form-select option {
+  background-color: #1a1a1a;
+  color: var(--bs-light);
+  padding: 0.75rem;
+}
+
+/* Time input specific styling */
+.martial-art-form-container input[type="time"] {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.95) 0%, rgba(201, 162, 39, 0.95) 100%);
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.martial-art-form-container input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(0.4);
+  cursor: pointer;
+}
+
+.martial-art-form-container .form-label {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--bs-light);
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+.martial-art-form-container textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.95) 0%, rgba(201, 162, 39, 0.95) 100%);
+  color: #1a1a1a;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Benefits Container */
+.benefits-container {
+  background: rgba(26, 26, 26, 0.8);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  padding: 1.25rem;
+  min-height: 120px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  background: rgba(45, 45, 45, 0.5);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.benefit-item:hover {
+  background: rgba(45, 45, 45, 0.7);
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+.benefit-item:last-child {
+  margin-bottom: 0;
+}
+
+.benefit-item .form-check {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.benefit-item .form-check-input {
+  background-color: rgba(212, 175, 55, 0.2);
+  border-color: var(--bs-warning);
+}
+
+.benefit-item .form-check-input:checked {
+  background-color: var(--bs-warning);
+  border-color: var(--bs-warning);
+}
+
+.benefit-item .form-check-label {
+  color: var(--bs-light);
+  cursor: default;
+}
+
+.remove-benefit-btn {
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+}
+
+/* Form validation styles */
+.martial-art-form-container .form-control.is-invalid,
+.martial-art-form-container .form-select.is-invalid {
+  border-color: #dc3545;
+}
+
+.martial-art-form-container .invalid-feedback {
+  display: none;
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.martial-art-form-container .form-control.is-invalid ~ .invalid-feedback,
+.martial-art-form-container .was-validated .form-control:invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.martial-art-form-container .form-control:invalid {
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+.martial-art-form-container .was-validated .form-control:invalid {
+  border-color: #dc3545;
+}
+
+/* Form text styles */
+.martial-art-form-container .form-text {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  color: rgba(212, 175, 55, 0.7);
+  font-style: italic;
+}
+
+/* Instructor Checkboxes */
+.instructors-checkbox-container {
+  background: rgba(26, 26, 26, 0.8);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  padding: 1.25rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.instructor-checkbox-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  background: rgba(45, 45, 45, 0.5);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.instructor-checkbox-item:hover {
+  background: rgba(45, 45, 45, 0.7);
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+.instructor-checkbox-item:last-child {
+  margin-bottom: 0;
+}
+
+.instructor-checkbox-item .form-check-input {
+  background-color: rgba(212, 175, 55, 0.2);
+  border: 2px solid var(--bs-warning);
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.instructor-checkbox-item .form-check-input:checked {
+  background-color: var(--bs-warning);
+  border-color: var(--bs-warning);
+}
+
+.instructor-checkbox-item .form-check-label {
+  color: var(--bs-light);
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0;
+}
+
+#instructorsError {
+  display: none;
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Bootstrap Modal Overrides for Dark Theme */
+.modal-content.bg-dark {
+  background-color: rgba(26, 26, 26, 0.98) !important;
+}
+
+.modal-content.bg-dark .modal-header {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.modal-content.bg-dark .modal-footer {
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.modal-content.border-warning {
+  border: 2px solid rgba(212, 175, 55, 0.5);
+}
+
+.modal-content.border-danger {
+  border: 2px solid rgba(220, 53, 69, 0.5);
+}
+
+.modal-content.bg-dark .form-control {
+  background-color: rgba(45, 45, 45, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: var(--bs-light);
+}
+
+.modal-content.bg-dark .form-control:focus {
+  background-color: rgba(45, 45, 45, 0.9);
+  border-color: var(--bs-warning);
+  color: var(--bs-light);
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.15);
+}
+
+.btn-close-white {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Instructor Card Styles */
+.instructor-card {
+  background: rgba(45, 45, 45, 0.6);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.instructor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.instructor-image {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.instructor-image-placeholder {
+  background: rgba(26, 26, 26, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(212, 175, 55, 0.3);
+}
+
+.instructor-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.instructor-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bs-light);
+  margin-bottom: 0.5rem;
+}
+
+.instructor-title {
+  font-size: 0.95rem;
+  color: var(--bs-warning);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.instructor-disciplines {
+  color: var(--bs-light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+/* Photo Upload Container */
+.photo-upload-container {
+  margin-bottom: 1rem;
+}
+
+.photo-preview {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px dashed rgba(212, 175, 55, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(45, 45, 45, 0.6);
+  margin: 0 auto;
+}
+
+.photo-preview:hover {
+  border-color: var(--bs-warning);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.photo-placeholder {
+  text-align: center;
+  color: rgba(212, 175, 55, 0.6);
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Class Card Styles */
+.class-card {
+  background: rgba(45, 45, 45, 0.6);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.class-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
+  transform: translateY(-2px);
+}
+
+.class-header {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.class-time {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: var(--bs-muted);
+}
+
+.class-body {
+  color: var(--bs-muted);
+  font-size: 0.9rem;
+}
+
+.class-instructor,
+.class-age-group {
+  display: flex;
+  align-items: center;
+}
+
+.class-level .badge {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+}
+
+/* Classes Management Page Styles */
+.classes-header {
+  margin-bottom: 3rem;
+}
+
+.add-class-btn {
+  display: block;
+  background: linear-gradient(135deg, #d4af37 0%, #c9a227 100%);
+  color: #1a1a1a;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.add-class-btn:hover {
+  background: linear-gradient(135deg, #e0bb47 0%, #d4af37 100%);
+  color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4);
+}
+
+.classes-table-container {
+  background: rgba(26, 26, 26, 0.6);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.classes-table-header {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2fr;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background: rgba(45, 45, 45, 0.8);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.table-col {
+  color: var(--bs-light);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.table-col-actions {
+  text-align: right;
+}
+
+.classes-table-body {
+  padding: 0;
+}
+
+.class-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2fr;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(45, 45, 45, 0.6);
+  transition: background 0.2s ease;
+  align-items: center;
+}
+
+.class-row:last-child {
+  border-bottom: none;
+}
+
+.class-row:hover {
+  background: rgba(45, 45, 45, 0.4);
+}
+
+.table-cell {
+  color: var(--bs-light);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.table-cell-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.action-btn {
+  padding: 0.65rem 1.75rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  background: transparent;
+  min-width: 100px;
+}
+
+.action-btn-edit {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--bs-light);
+}
+
+.action-btn-edit:hover {
+  border-color: var(--bs-warning);
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--bs-warning);
+}
+
+.action-btn-delete {
+  border-color: rgba(220, 53, 69, 0.5);
+  color: #dc3545;
+}
+
+.action-btn-delete:hover {
+  border-color: #dc3545;
+  background: rgba(220, 53, 69, 0.1);
+  color: #ff4d5e;
+}
+
+/* Responsive adjustments for classes table */
+@media (max-width: 1200px) {
+  .classes-table-header,
+  .class-row {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+    gap: 0.75rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .action-btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    min-width: 85px;
+  }
+}
+
+@media (max-width: 768px) {
+  .classes-table-header {
+    display: none;
+  }
+
+  .class-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    border-left: 3px solid var(--bs-warning);
+  }
+
+  .table-cell::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--bs-warning);
+    margin-right: 0.5rem;
+    min-width: 120px;
+    display: inline-block;
+  }
+
+  .table-cell-actions {
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+
+  .table-cell-actions::before {
+    display: none;
+  }
+}
+
+/* Form Submit Button Styling */
+.martial-art-form-container .btn-warning {
+  background: linear-gradient(135deg, #d4af37 0%, #c9a227 100%);
+  border: none;
+  color: #1a1a1a;
+  padding: 0.85rem 2.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+}
+
+.martial-art-form-container .btn-warning:hover {
+  background: linear-gradient(135deg, #e0bb47 0%, #d4af37 100%);
+  color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4);
+}
+
+.martial-art-form-container .btn-outline-light {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: var(--bs-light);
+  padding: 0.85rem 2.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 6px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.martial-art-form-container .btn-outline-light:hover {
+  border-color: var(--bs-light);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--bs-light);
 }

@@ -8,6 +8,7 @@
     "schedule": "График",
     "contact": "Контакти",
     "martialArts": "Бойни Изкуства",
+    "register": "Register",
     "login": "Вход",
     "logout": "Изход",
     "profile": "Профил",
@@ -105,7 +106,18 @@
     "checkEmail": "Проверете имейла си за потвърждение.",
     "goToLogin": "Към входа",
     "profileUpdated": "Профилът е обновен успешно!",
-    "role": "Роля"
+    "role": "Роля",
+    "loginSuccess": "Успешен вход"
+  },
+  "profile": {
+    "title": "Профил",
+    "fullName": "Име",
+    "email": "Имейл",
+    "memberSince": "Регистриран на",
+    "editProfile": "Редактирай профил",
+    "changePassword": "Промени парола",
+    "newPassword": "Нова парола",
+    "confirmPassword": "Потвърди парола"
   },
   "admin": {
     "dashboard": "Админ панел",
