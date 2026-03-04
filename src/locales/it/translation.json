@@ -11,7 +11,8 @@
     "login": "Accedi",
     "logout": "Esci",
     "profile": "Profilo",
-    "admin": "Admin"
+    "admin": "Admin",
+    "instructors": "Istruttori"
   },
   "hero": {
     "title": "NO LIMITATION",
@@ -233,5 +234,14 @@
   "validation": {
     "titleRequired": "Il titolo è obbligatorio",
     "descriptionRequired": "La descrizione è obbligatoria"
+  },
+  "days": {
+    "monday": "Lunedi",
+    "tuesday": "Martedì",
+    "wednesday": "Mercoledì",
+    "thursday": "Giovedì",
+    "friday": "Venerdì",
+    "saturday": "Sabato",
+    "sunday": "Domenica"
   }
 }

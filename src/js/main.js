@@ -17,9 +17,9 @@ import { renderHome } from './pages/Home.js';
 import { renderAbout } from './pages/About.js';
 import { renderContact } from './pages/Contact.js';
 import { renderLogin } from './pages/Login.js';
-import { renderRegister } from './pages/Register.js';
 import { renderProfile } from './pages/Profile.js';
 import { renderSchedule } from './pages/Schedule.js';
+import { renderInstructors } from './pages/Instructors.js';
 import { renderMartialArtDetail } from './pages/MartialArtDetail.js';
 import { renderAdminDashboard } from './pages/admin/Dashboard.js';
 import { renderAdminUsers } from './pages/admin/Users.js';
@@ -87,8 +87,8 @@ function registerRoutes() {
   router.route('/about', renderAbout);
   router.route('/contact', renderContact);
   router.route('/schedule', renderSchedule);
+  router.route('/instructors', renderInstructors);
   router.route('/login', renderLogin);
-  router.route('/register', renderRegister);
 
   // Protected routes
   router.route('/profile', renderProfile, { requiresAuth: true });

@@ -11,7 +11,8 @@
     "login": "Вход",
     "logout": "Выход",
     "profile": "Профиль",
-    "admin": "Админ"
+    "admin": "Админ",
+    "instructors": "Инструкторы"
   },
   "hero": {
     "title": "NO LIMITATION",
@@ -233,5 +234,14 @@
   "validation": {
     "titleRequired": "Заголовок обязателен",
     "descriptionRequired": "Описание обязательно"
+  },
+  "days": {
+    "monday": "Понедельник",
+    "tuesday": "Вторник",
+    "wednesday": "Среда",
+    "thursday": "Четверг",
+    "friday": "Пятница",
+    "saturday": "Суббота",
+    "sunday": "Воскресенье"
   }
 }

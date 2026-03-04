@@ -80,6 +80,16 @@ export async function renderHeader() {
                 ${i18n.t('nav.contact')}
               </a>
             </li>
+            <li class="nav-item">
+              <a href="/schedule" data-link class="nav-link px-3 ${currentPath === '/schedule' ? 'text-accent' : ''}">
+                ${i18n.t('nav.schedule')}
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/instructors" data-link class="nav-link px-3 ${currentPath === '/instructors' ? 'text-accent' : ''}">
+                ${i18n.t('nav.instructors')}
+              </a>
+            </li>
             ${martialArts.length > 0 ? `
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle px-3 ${currentPath.startsWith('/martial-arts') ? 'text-accent' : ''}" href="#" id="martialArtsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -128,11 +138,6 @@ export async function renderHeader() {
                 </ul>
               </li>
             ` : `
-              <li class="nav-item ms-lg-2">
-                <a href="/register" data-link class="btn btn-outline-warning btn-sm px-4 rounded-pill">
-                  ${i18n.t('nav.register') || 'Register'}
-                </a>
-              </li>
               <li class="nav-item ms-lg-2">
                 <a href="/login" data-link class="btn btn-warning btn-sm px-4 rounded-pill">
                   ${i18n.t('nav.login') || 'Login'}

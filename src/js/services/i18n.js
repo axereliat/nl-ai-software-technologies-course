@@ -5,6 +5,10 @@
 
 import i18next from 'i18next';
 import { state } from './state.js';
+import bgTranslation from '../../locales/bg/translation.json';
+import enTranslation from '../../locales/en/translation.json';
+import ruTranslation from '../../locales/ru/translation.json';
+import itTranslation from '../../locales/it/translation.json';
 
 class I18nService {
   constructor() {
@@ -19,14 +23,6 @@ class I18nService {
     if (this.initialized) return;
 
     try {
-      // Load all translation files
-      const [bgTranslation, enTranslation, ruTranslation, itTranslation] = await Promise.all([
-        fetch('/locales/bg/translation.json').then(r => r.json()),
-        fetch('/locales/en/translation.json').then(r => r.json()),
-        fetch('/locales/ru/translation.json').then(r => r.json()),
-        fetch('/locales/it/translation.json').then(r => r.json())
-      ]);
-
       const resources = {
         bg: { translation: bgTranslation },
         en: { translation: enTranslation },
